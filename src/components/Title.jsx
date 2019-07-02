@@ -5,7 +5,7 @@ function Title() {
     <div className="title">
       <div className="text-wrapper">
         <h1>
-          WELCOME!
+          WELCOME
         </h1>
       </div>
     </div>

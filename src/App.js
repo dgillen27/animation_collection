@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Title from './components/Title';
-import HamburgerMenu from './components/HamburgerMenu'
+import HamburgerMenu from './components/HamburgerMenu';
+import ButtonsPage from './components/ButtonsPage';
+import OpenMenu from './components/OpenMenu'
 
 class App extends Component {
   constructor() {
@@ -30,6 +32,9 @@ class App extends Component {
         <Title />
         <HamburgerMenu
           onClick={this.toggleMenu}
+          menuToggle={menuToggle}/>
+        <ButtonsPage />
+        <OpenMenu
           menuToggle={menuToggle}/>
       </div>
     );

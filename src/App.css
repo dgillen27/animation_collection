@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barlow|Merriweather&display=swap");
 
 .App {
   overflow: hidden;
 }
 
+/* Title Page With Hover Animation */
+
 .title {
   height: 100vh;
   background: #7a86cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-wrapper {
@@ -60,8 +65,6 @@
 .text-wrapper h1:hover {
   letter-spacing: 2px;
   color: white;
-  /* border-top: 2px solid #6849e3; */
-  /* border-bottom: 2px solid #6849e3; */
   cursor: pointer;
 }
 
@@ -113,6 +116,8 @@
   }
 }
 
+/* Hamburger Menu */
+
 .hamburger-menu {
   position: fixed;
   top: 20px;
@@ -123,14 +128,14 @@
   justify-content: center;
   width: 55px;
   height: 55px;
-  background: #002;
+  background: #6849e3;
   transition: 300ms;
   border-radius: 50%;
+  z-index: 5;
 }
 
 .hamburger-menu:hover {
   cursor: pointer;
-  background: #6849e3;
 }
 
 .burger {
@@ -138,7 +143,7 @@
   height: 3px;
   background: white;
   margin: 2px 0;
-  transition: 300ms;
+  transition: all 300ms, background-color 200ms;
 }
 
 #hidden-burger {
@@ -155,4 +160,121 @@
 #bottom-burger {
   transform: rotate(-45deg);
   position: absolute;
+}
+
+/* Buttons Page */
+
+.buttons-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7a86cb;
+  border-top: 5px solid #6849e3;
+}
+
+button {
+  color: #E6E7F2;
+  border-radius: 50px;
+  margin: 50px;
+  /* border: 3px solid #42487B; */
+  box-shadow: 0 0 3px 2px #42487B;
+  border: 3px solid #727DBF;
+  height: 50px;
+  width: 150px;
+  background: linear-gradient(#727DBF, #6872AF);
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  text-shadow: #7480C2 1px 1px 3px 5px;
+  transition: background-color, 300ms;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 3px solid #727DBF;
+  background: linear-gradient(#6872AF, #727DBF);
+  transition: 300ms;
+  box-shadow: 0 0 3px 2px #616BA2;
+}
+
+button:focus {
+  color: #6849E3;
+  background: #383E5E;
+  border: 2px solid #727DBF;
+  text-shadow: none;
+  outline: none;
+  box-shadow: 0 0 3px 5px #6849E3;
+}
+
+button:enabled {
+  content: none;
+}
+
+button:focus:after {
+  content: "ED!";
+}
+
+/* Open Menu */
+
+.open-menu {
+  /* display: none; */
+  flex-direction: column;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 85vw;
+  background: rgba(104, 73, 227, .9);
+  color: white;
+  transition: transform 400ms;
+}
+
+#open {
+  transform: translateX(0);
+}
+
+#closed {
+  transform: translateX(-100vw);
+}
+
+.open-menu h1 {
+  position: relative;
+  left: 50px;
+  transition: color 300ms;
+}
+
+.open-menu h2 {
+  position: relative;
+  left: 25px;
+  transition: color 300ms;
+}
+
+.open-menu h1:hover {
+  cursor: pointer;
+  color: #DC153B;
+}
+
+.open-menu h2:hover {
+  cursor: pointer;
+  color: #DC153B;
+}
+
+.menu-content {
+  position: relative;
+  top: 80px;
+}
+
+@media only screen and (max-width: 880px) {
+  .buttons-page {
+    flex-direction: column;
+  }
+
+  .text-wrapper h1 {
+    position: relative;
+    color: #6849e3;
+    font-size: 2rem;
+    transition: 300ms;
+    letter-spacing: 15px;
+    display: inline-block;
+  }
 }

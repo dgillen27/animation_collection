@@ -14,7 +14,7 @@
   transform: translate(-50%, -50%)
 }
 
-h1 {
+.text-wrapper h1 {
   position: relative;
   color: #6849e3;
   font-size: 4rem;
@@ -23,7 +23,7 @@ h1 {
   display: inline-block;
 }
 
-h1:before {
+.text-wrapper h1:before {
   content: '';
   position: absolute;
   top: -2px;
@@ -34,7 +34,7 @@ h1:before {
   border: 2px solid transparent;
 }
 
-h1:after {
+.text-wrapper h1:after {
   content: '';
   position: absolute;
   top: 0;
@@ -45,15 +45,15 @@ h1:after {
   border: 2px solid transparent;
 }
 
-h1:hover:after {
+.text-wrapper h1:hover:after {
   animation: bottom-animation 50s linear
 }
 
-h1:hover:before {
+.text-wrapper h1:hover:before {
   animation: border-animation 50s linear;
 }
 
-h1:hover {
+.text-wrapper h1:hover {
   letter-spacing: 2px;
   color: white;
   /* border-top: 2px solid #6849e3; */
@@ -107,4 +107,31 @@ h1:hover {
     border-top-color: #6849e3;
     /* border-bottom-color: #6849e3; */
   }
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background: #002;
+  transition: 300ms;
+  border-radius: 50%;
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+  background: #6849e3;
+}
+
+.burger {
+  width: 38px;
+  height: 3px;
+  background: white;
+  margin: 2px 0;
 }

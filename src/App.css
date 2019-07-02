@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 
+.App {
+  overflow: hidden;
+}
+
 .title {
   height: 100vh;
   background: #7a86cb;
@@ -111,8 +115,8 @@
 
 .hamburger-menu {
   position: fixed;
-  top: 2vw;
-  left: 2vw;
+  top: 20px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,4 +138,21 @@
   height: 3px;
   background: white;
   margin: 2px 0;
+  transition: 300ms;
+}
+
+#hidden-burger {
+  background: transparent;
+}
+
+#top-burger {
+  transform: rotate(45deg);
+  margin-left: 0;
+  position: absolute;
+
+}
+
+#bottom-burger {
+  transform: rotate(-45deg);
+  position: absolute;
 }

@@ -3,7 +3,9 @@ import './App.css';
 import Title from './components/Title';
 import HamburgerMenu from './components/HamburgerMenu';
 import ButtonsPage from './components/ButtonsPage';
-import OpenMenu from './components/OpenMenu'
+import OpenMenu from './components/OpenMenu';
+import Input from './components/Input';
+import Toggle from './components/Toggle';
 
 class App extends Component {
   constructor() {
@@ -36,6 +38,8 @@ class App extends Component {
         <ButtonsPage />
         <OpenMenu
           menuToggle={menuToggle}/>
+        <Toggle />
+        {/*<Input />*/}
       </div>
     );
   }

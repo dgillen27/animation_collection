@@ -42,13 +42,13 @@ class App extends Component {
         <HamburgerMenu
           onClick={this.toggleMenu}
           menuToggle={menuToggle}/>
-        <ButtonsPage />
-        <OpenMenu
-          menuToggle={menuToggle}/>
         <Toggle
           handleCheckboxChange={this.handleCheckboxChange}
           checked={checked}/>
-        {/*<Input />*/}
+        <ButtonsPage />
+        <OpenMenu
+          menuToggle={menuToggle}/>
+        <Input />
       </div>
     );
   }

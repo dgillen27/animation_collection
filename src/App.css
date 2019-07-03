@@ -239,18 +239,21 @@ button:focus:after {
   top: 0;
   height: 100vh;
   width: 85vw;
-  background: rgba(104, 73, 227, .9);
+  background: rgba(104, 73, 227, 1);
   color: white;
-  transition: transform 400ms;
+  transition: transform 300ms, visibility 1000ms;
   z-index: 4;
 }
 
 #open {
   transform: translateX(0);
+  visibility: visible;
 }
 
 #closed {
   transform: translateX(-100vw);
+  /* opacity: 0; */
+  visibility: hidden; 
 }
 
 .open-menu h1 {

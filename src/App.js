@@ -12,11 +12,12 @@ class App extends Component {
     super();
 
     this.state = {
-      menuToggle: false
+      menuToggle: false,
+      checked: false
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
-
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
   toggleMenu(ev) {
@@ -27,8 +28,14 @@ class App extends Component {
     })
   }
 
+  handleCheckboxChange(ev) {
+    this.setState({
+      checked: ev.target.checked
+    })
+  }
+
   render() {
-    const { menuToggle } = this.state
+    const { menuToggle, checked } = this.state
     return (
       <div className="App">
         <Title />
@@ -38,7 +45,9 @@ class App extends Component {
         <ButtonsPage />
         <OpenMenu
           menuToggle={menuToggle}/>
-        <Toggle />
+        <Toggle
+          handleCheckboxChange={this.handleCheckboxChange}
+          checked={checked}/>
         {/*<Input />*/}
       </div>
     );

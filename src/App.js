@@ -6,6 +6,7 @@ import ButtonsPage from './components/ButtonsPage';
 import OpenMenu from './components/OpenMenu';
 import Input from './components/Input';
 import Toggle from './components/Toggle';
+import VideoFrame from './components/VideoFrame';
 
 class App extends Component {
   constructor() {
@@ -49,6 +50,7 @@ class App extends Component {
         <OpenMenu
           menuToggle={menuToggle}/>
         <Input />
+        {/* <VideoFrame /> */}
       </div>
     );
   }

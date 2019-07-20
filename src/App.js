@@ -7,6 +7,8 @@ import OpenMenu from './components/OpenMenu';
 import Input from './components/Input';
 import Toggle from './components/Toggle';
 import VideoFrame from './components/VideoFrame';
+import { Route } from 'react-router-dom';
+import { withRouter } from 'react-router'
 
 class App extends Component {
   constructor() {
@@ -39,21 +41,30 @@ class App extends Component {
     const { menuToggle, checked } = this.state
     return (
       <div className="App">
-        <Title />
-        <HamburgerMenu
+      < HamburgerMenu
           onClick={this.toggleMenu}
           menuToggle={menuToggle}/>
-        <Toggle
-          handleCheckboxChange={this.handleCheckboxChange}
-          checked={checked}/>
-        <ButtonsPage />
         <OpenMenu
           menuToggle={menuToggle}/>
-        <Input />
-        {/* <VideoFrame /> */}
+        <Route exact path="/" render={() => (
+          <Title />
+        )} />
+        <Route exact path="/toggle" render={() => (
+          <Toggle
+          handleCheckboxChange={this.handleCheckboxChange}
+          checked={checked}/>
+        )} />
+        <Route exact path="/buttons" render={() => (
+          <ButtonsPage />
+        )} />
+        
+        <Route exact path="/input" render={() => (
+          <Input />
+        )} />
+        <Route exact path="/video" render={() => (<VideoFrame/>)} />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -263,10 +263,17 @@ button:focus:after {
   transition: color 300ms;
 }
 
-.open-menu h2 {
+.open-menu a {
   position: relative;
   left: 25px;
   transition: color 300ms;
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .open-menu h1:hover {
@@ -274,7 +281,7 @@ button:focus:after {
   color: #DC153B;
 }
 
-.open-menu h2:hover {
+.open-menu a:hover {
   cursor: pointer;
   color: #DC153B;
 }

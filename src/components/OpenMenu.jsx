@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function OpenMenu(props) {
-  const { menuToggle} = props
+  const { menuToggle, } = props
   return (
     <div className="open-menu" id={ menuToggle? "open" : "closed"}>
       <div className="menu-content">
-        <h2>WELCOME/HOVER ANIMATION</h2>
-        <h2>BUTTONS</h2>
-        <h2>TOGGLE</h2>
-        <h2>INPUT</h2>
+        <Link to='/'>HOVER ANIMATION</Link>
+        <Link to='/buttons'>BUTTONS</Link>
+        <Link to='/toggle'>TOGGLE</Link>
+        <Link to='/input'>INPUT</Link>
+        <Link to='/video'>VIDEO FRAME</Link>
       </div>
     </div>
   )
 }
 
-export default OpenMenu
+export default OpenMenu;

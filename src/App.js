@@ -7,8 +7,9 @@ import OpenMenu from './components/OpenMenu';
 import Input from './components/Input';
 import Toggle from './components/Toggle';
 import VideoFrame from './components/VideoFrame';
+import SquareLoad from './components/SquareLoad';
 import { Route } from 'react-router-dom';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
 
 class App extends Component {
   constructor() {
@@ -62,6 +63,7 @@ class App extends Component {
           <Input />
         )} />
         <Route exact path="/video" render={() => (<VideoFrame/>)} />
+        <Route exact path="/square-load" render={() => (<SquareLoad />)} />
       </div>
     );
   }

@@ -1,0 +1,74 @@
+/* SquareLoad */
+
+.square-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 330px;
+  }
+  
+  .square {
+    height: 100px;
+    width: 100px;
+    background-color: #0027FF;
+    margin: 5px;
+  }
+  
+  .left {
+    opacity: 0;
+    grid-column-start: 1;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .center {
+    grid-column-start: 2;
+    animation: open-up 500ms linear;
+    align-self: center;
+  }
+  
+  @keyframes open-up {
+    from {
+      width: 100px;
+    }
+  
+    to {
+      width: 200px;
+    }
+  }
+  
+  .right {
+    grid-column-start: 3;
+    opacity: 0;
+    animation: appear 100ms linear;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms; 
+    align-self: end;
+  }
+  
+  .right::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color:  #0027ff;
+  }
+
+  @keyframes close-right {
+    from {
+        width: 105px;
+    }
+
+    to {
+        width: 100px;
+    }
+  }
+  

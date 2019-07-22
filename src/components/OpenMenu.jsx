@@ -11,6 +11,7 @@ function OpenMenu(props) {
         <Link to='/toggle'>TOGGLE</Link>
         <Link to='/input'>INPUT</Link>
         <Link to='/video'>VIDEO FRAME</Link>
+        <Link to='/square-load'>SQUARE LOAD</Link>
       </div>
     </div>
   )
